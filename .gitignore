@@ -7,5 +7,5 @@ sites/*/private
 #ignore files eclipse
 .project
 
-#drush config
+#drush configs
 sites/*/drushrc.php
