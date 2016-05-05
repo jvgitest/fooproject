@@ -342,4 +342,4 @@
 #  $options['alias-path'] = $repo . '/drush/aliases';
 #}
 
-$options['uri'] = 'http://demo.fooproject_dev1';
+$options['uri'] = 'http://demo.fooproject_dev2';
