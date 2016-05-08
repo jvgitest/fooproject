@@ -173,6 +173,47 @@ function site_deploy_update_7402(&$sandbox) {
 
    devel_generate_content($generate);
   
+  //copy some resources
+  $message = site_deploy_copy_resources();
+  $messages[] = $message;
+  HookUpdateDeployTools\Message::make($message);
+
   return $messages;
-  //return implode('\n', $messages);
 }
+
+//copy some resources
+function site_deploy_copy_resources()
+{
+	//theme css generated from theme settings saving
+	$base_theme='adaptivetheme';
+	$src=site_deploy_joinpaths(variable_get('file_public_path', site_deploy_joinpaths(conf_path(), 'files')), '..', 'others', 'theme_files_generated', $base_theme);
+	$dst=site_deploy_joinpaths(variable_get('file_public_path', site_deploy_joinpaths(conf_path(), 'files')), $base_theme);
+	site_deploy_recursive_copy($src,$dst);
+	
+	return sprintf("Resources copy from [%s] to [%s]", $src, $dst);
+}
+
+function site_deploy_trimds($s) {
+    return rtrim($s,DIRECTORY_SEPARATOR);
+}
+
+function site_deploy_joinpaths() {
+    return implode(DIRECTORY_SEPARATOR, array_map('site_deploy_trimds', func_get_args()));
+}
+
+//copy recursivly a folder into another
+function site_deploy_recursive_copy($src,$dst) { 
+    $dir = opendir($src); 
+    @mkdir($dst); 
+    while(false !== ( $file = readdir($dir)) ) { 
+        if (( $file != '.' ) && ( $file != '..' )) { 
+            if ( is_dir(site_deploy_joinpaths($src, $file)) ) { 
+                site_deploy_recursive_copy(site_deploy_joinpaths($src, $file) ,site_deploy_joinpaths($dst, $file)); 
+            } 
+            else { 
+                copy(site_deploy_joinpaths($src, $file), site_deploy_joinpaths($dst, $file)); 
+            } 
+        } 
+    } 
+    closedir($dir); 
+} 
