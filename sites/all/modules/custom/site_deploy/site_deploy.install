@@ -93,7 +93,13 @@ $theme='sky';
  */
 function site_deploy_update_7402(&$sandbox) {
   $message = array();
-  
+  db_query("DELETE FROM {system} WHERE name LIKE '%ctool%'");
+  db_query("DROP TABLE IF EXISTS {ctools_css_cache}");
+  db_query("DROP TABLE IF EXISTS {ctools_custom_content}");
+  db_query("DROP TABLE IF EXISTS {ctools_object_cache}");
+  db_query("DROP TABLE IF EXISTS {cache_features}");
+  db_query("DROP TABLE IF EXISTS {fe_block_boxes}");
+  db_query("TRUNCATE TABLE {cache}"); //empty table not remove
   //modules
   $module_list = array(
     'comment',
@@ -128,7 +134,7 @@ function site_deploy_update_7402(&$sandbox) {
 
   // Disable the default Bartik theme
   theme_disable(array('seven'));
-   /**
+   
   
   //features
   $module_list = array(
@@ -138,7 +144,7 @@ function site_deploy_update_7402(&$sandbox) {
     'fa_theme_sky',
   );
   $message[] = HookUpdateDeployTools\Modules::enable($module_list);
-  */
+  
   return $message;
   return implode('\n', $message);
 }
