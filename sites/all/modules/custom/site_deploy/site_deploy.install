@@ -60,17 +60,17 @@ function site_deploy_update_7000(&$sandbox) {
 }
 
  /**
- * Remove blocks from regions blocks
+ * Remove default blocks from regions blocks
  */
- /**
+
 function site_deploy_update_7401() {
 $theme='sky';
- $result = db_query("SELECT * FROM {block} WHERE theme = '%s'", $theme);
+ $result = db_query("SELECT * FROM {block}");
   $blocks = array();
   while ($bloc = $result->fetchAssoc()) {
     $blocks[$bloc['module']][$bloc['delta']] = $bloc;
   }
-  HookUpdateDeployTools\Message::varDumpToDrush($blocks);
+  //HookUpdateDeployTools\Message::varDumpToDrush($blocks);
   
   // Remove blocks that are no longer defined by the code from the database.
   foreach ($blocks as $module => $module_block) {
@@ -78,15 +78,15 @@ $theme='sky';
     // being lost when modules are disabled.
     if (module_exists($module)) {
       foreach ($module_block as $delta => $block) {
-         $sql=sprintf("UPDATE FROM {block} status = '%s',region = '%s' WHERE module = '%s' AND delta = '%s' AND theme = '%s'", 0, 'BLOCK_REGION_NONE', $module, $delta, $theme);
+         $sql=sprintf("UPDATE {block} SET status = '%s',region = '%s' WHERE module = '%s' AND delta = '%s'", 0, 'BLOCK_REGION_NONE', $module, $delta);
+         db_query($sql);
          HookUpdateDeployTools\Message::make($sql);
-         //db_query($sql);
       }
     }
   }
   
   return HookUpdateDeployTools\Message::make("Whatever is returned is displayed after this update runs.");
-}*/
+}
 
 /**
  * Whatever it placed in this docblock gets displayed upon drush updb.
@@ -159,6 +159,19 @@ function site_deploy_update_7402(&$sandbox) {
   $message = HookUpdateDeployTools\Modules::enable($module_list);
   $messages[] = $message;
   HookUpdateDeployTools\Message::make($message);
+  
+  //generate contents
+  module_load_include('inc', 'devel_generate', 'devel_generate');
+  module_load_include('inc', 'devel_generate');
+   $generate = array();
+	$generate['values'] = array(
+	 'node_types' => array('article' => article),
+  'kill_content' => 1,
+	  'num_nodes' => 30,
+	  'max_comments' => 0,
+	);
+
+   devel_generate_content($generate);
   
   return $messages;
   //return implode('\n', $messages);
