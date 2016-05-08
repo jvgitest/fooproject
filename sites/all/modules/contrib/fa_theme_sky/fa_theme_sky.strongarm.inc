@@ -15,8 +15,8 @@ function fa_theme_sky_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'color_sky_files';
   $strongarm->value = array(
-    0 => 'public://color/sky-54564354/logo.png',
-    1 => 'public://color/sky-54564354/colors.css',
+    0 => 'public://color/sky-b092f9db/logo.png',
+    1 => 'public://color/sky-b092f9db/colors.css',
   );
   $export['color_sky_files'] = $strongarm;
 
@@ -24,7 +24,7 @@ function fa_theme_sky_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'color_sky_logo';
-  $strongarm->value = 'public://color/sky-54564354/logo.png';
+  $strongarm->value = 'public://color/sky-b092f9db/logo.png';
   $export['color_sky_logo'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -67,7 +67,7 @@ function fa_theme_sky_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'color_sky_stylesheets';
   $strongarm->value = array(
-    0 => 'public://color/sky-54564354/colors.css',
+    0 => 'public://color/sky-b092f9db/colors.css',
   );
   $export['color_sky_stylesheets'] = $strongarm;
 
@@ -91,7 +91,7 @@ function fa_theme_sky_strongarm() {
     'toggle_comment_user_verification' => 1,
     'toggle_favicon' => 1,
     'default_logo' => 1,
-    'logo_path' => 'public://logo_3.png',
+    'logo_path' => '',
     'logo_upload' => '',
     'default_favicon' => 1,
     'favicon_path' => '',
