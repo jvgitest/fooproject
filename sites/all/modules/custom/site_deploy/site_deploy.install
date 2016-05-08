@@ -64,9 +64,9 @@ function site_deploy_update_7000(&$sandbox) {
  */
 function site_deploy_update_7401() {
 $theme='sky';
- $result = db_query("SELECT * FROM {blocks} WHERE theme = '%s'", $theme);
+ $result = db_query("SELECT * FROM {block} WHERE theme = '%s'", $theme);
   $blocks = array();
-  while ($bloc = db_fetch_array($result)) {
+  while ($bloc = $result->fetchAssoc();) {
     $blocks[$bloc['module']][$bloc['delta']] = $bloc;
   }
   HookUpdateDeployTools\Message::varDumpToDrush($blocks);
@@ -77,7 +77,7 @@ $theme='sky';
     // being lost when modules are disabled.
     if (module_exists($module)) {
       foreach ($module_block as $delta => $block) {
-         $sql=sprintf("UPDATE FROM {blocks} status = '%s',region = '%s' WHERE module = '%s' AND delta = '%s' AND theme = '%s'", 0, 'BLOCK_REGION_NONE', $module, $delta, $theme");
+         $sql=sprintf("UPDATE FROM {block} status = '%s',region = '%s' WHERE module = '%s' AND delta = '%s' AND theme = '%s'", 0, 'BLOCK_REGION_NONE', $module, $delta, $theme);
          HookUpdateDeployTools\Message::make($sql);
          //db_query($sql);
       }
