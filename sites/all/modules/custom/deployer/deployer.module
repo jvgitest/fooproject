@@ -44,6 +44,14 @@ function deployer_update_7402() {
   );
   module_enable($module_list);
   
+  //themes
+    $theme_list = array(
+    'adaptivetheme',
+    'adaptivetheme_admin',
+    'sky',
+  );
+  theme_enable($theme_list);
+  
   //features
   $module_list = array(
     'fa_blocks_content',
