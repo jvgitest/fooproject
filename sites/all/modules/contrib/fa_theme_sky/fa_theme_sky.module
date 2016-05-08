@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the fa_theme_sky feature.
+ */
+
+include_once 'fa_theme_sky.features.inc';

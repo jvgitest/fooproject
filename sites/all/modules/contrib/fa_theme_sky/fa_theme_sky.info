@@ -1,0 +1,14 @@
+name = fa_theme_sky
+description = theme settings sky
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = color_sky_files
+features[variable][] = color_sky_logo
+features[variable][] = color_sky_palette
+features[variable][] = color_sky_stylesheets
+features[variable][] = theme_sky_files_directory
+features[variable][] = theme_sky_settings
