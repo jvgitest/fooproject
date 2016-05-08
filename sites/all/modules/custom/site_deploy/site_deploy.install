@@ -92,7 +92,9 @@ $theme='sky';
  * Whatever it placed in this docblock gets displayed upon drush updb.
  */
 function site_deploy_update_7402(&$sandbox) {
-  $message = array();
+  $messages = array();
+  
+  //clean database
   db_query("DELETE FROM {system} WHERE name LIKE '%ctool%'");
   db_query("DROP TABLE IF EXISTS {ctools_css_cache}");
   db_query("DROP TABLE IF EXISTS {ctools_custom_content}");
@@ -100,12 +102,14 @@ function site_deploy_update_7402(&$sandbox) {
   db_query("DROP TABLE IF EXISTS {cache_features}");
   db_query("DROP TABLE IF EXISTS {fe_block_boxes}");
   db_query("TRUNCATE TABLE {cache}"); //empty table not remove
+  
   //modules
   $module_list = array(
     'comment',
   );
-   $message[] = HookUpdateDeployTools\Modules::disable($module_list);
- 
+   $message = HookUpdateDeployTools\Modules::disable($module_list);
+   $messages[] = $message;
+   
   $module_list = array(
     'devel_generate',
     'strongarm',
@@ -114,7 +118,8 @@ function site_deploy_update_7402(&$sandbox) {
     'uuid_features',
     'menu_import', 
   );
-  $message[] = HookUpdateDeployTools\Modules::enable($module_list);
+  $message = HookUpdateDeployTools\Modules::enable($module_list);
+  $messages[] = $message;
   
   //themes
   $theme_list = array(
@@ -124,17 +129,25 @@ function site_deploy_update_7402(&$sandbox) {
     //'zen'
   );
   theme_enable($theme_list);
-
+  $message = sprintf("Theme enabled => %s", implode(', ', $theme_list));
+  $messages[] = $message;
+  HookUpdateDeployTools\Message::make($message);
+  
 	//Set default theme
   foreach ($theme_list as $var => $theme) {
     if (!is_numeric($var)) {
       variable_set($var, $theme);
+      $message = sprintf("Variable set %s => %s", $var, $theme);
+      $messages[] = $message;
+      HookUpdateDeployTools\Message::make($message);
     }
   }
 
   // Disable the default Bartik theme
-  theme_disable(array('seven'));
-   
+  theme_disable(array('bartik'));
+  $message = "Default front bartik theme is disabled";
+  HookUpdateDeployTools\Message::make($message);
+  $messages[] = $message;
   
   //features
   $module_list = array(
@@ -143,8 +156,10 @@ function site_deploy_update_7402(&$sandbox) {
     'fa_menus',
     'fa_theme_sky',
   );
-  $message[] = HookUpdateDeployTools\Modules::enable($module_list);
+  $message = HookUpdateDeployTools\Modules::enable($module_list);
+  $messages[] = $message;
+  HookUpdateDeployTools\Message::make($message);
   
-  return $message;
-  return implode('\n', $message);
+  return $messages;
+  //return implode('\n', $messages);
 }
