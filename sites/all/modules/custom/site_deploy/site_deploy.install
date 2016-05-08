@@ -66,7 +66,7 @@ function site_deploy_update_7401() {
 $theme='sky';
  $result = db_query("SELECT * FROM {block} WHERE theme = '%s'", $theme);
   $blocks = array();
-  while ($bloc = $result->fetchAssoc();) {
+  while ($bloc = $result->fetchAssoc()) {
     $blocks[$bloc['module']][$bloc['delta']] = $bloc;
   }
   HookUpdateDeployTools\Message::varDumpToDrush($blocks);
@@ -100,10 +100,13 @@ function site_deploy_update_7402(&$sandbox) {
    $message[] = HookUpdateDeployTools\Modules::disable($module_list);
   
   $module_list = array(
+    'devel',
     'devel_generate',
     'strongarm',
+    'features',
     'features_extra',
-    'realistic_dummy_content',    
+    'realistic_dummy_content',
+    'uuid',    
     'uuid_features',
     'menu_import',
   );
