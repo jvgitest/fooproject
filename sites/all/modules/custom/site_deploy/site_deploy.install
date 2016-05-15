@@ -91,6 +91,9 @@ function site_deploy_update_7402(&$sandbox) {
     'pathauto', 
     'token', 
   );
+  
+  variable_set('clean_url', 1);
+  
   $message = HookUpdateDeployTools\Modules::enable($module_list);
   $messages[] = $message;
   
