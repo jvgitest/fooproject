@@ -88,6 +88,8 @@ function site_deploy_update_7402(&$sandbox) {
     'realistic_dummy_content',   
     'uuid_features',
     'menu_import', 
+    'pathauto', 
+    'token', 
   );
   $message = HookUpdateDeployTools\Modules::enable($module_list);
   $messages[] = $message;

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the fa_taxonomy feature.
+ */
+
+include_once 'fa_taxonomy.features.inc';
