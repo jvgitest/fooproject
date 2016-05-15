@@ -1,0 +1,334 @@
+array(
+  (object) array(
+      'vid' => '70',
+      'uid' => '0',
+      'title' => 'Sed Ulciscor Utrum exemple',
+      'log' => '',
+      'status' => '1',
+      'comment' => '0',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'c5548af6-fd75-4412-83dd-b19750a3a8c5',
+      'nid' => '70',
+      'type' => 'page',
+      'language' => 'und',
+      'created' => '1463334697',
+      'changed' => '1463334782',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '1a88b95c-d548-4fe4-b21f-e81632c9d2e9',
+      'revision_timestamp' => '1463334782',
+      'revision_uid' => '1',
+      'body' => array(
+        'und' => array(
+          array(
+            'value' => "Abigo at luptatum te vel venio vicis zelus. Lenis modo pala pertineo quidem refero tation veniam.\r\n\r\n",
+            'summary' => '',
+            'format' => 'full_html',
+            'safe_value' => "<p>Abigo at luptatum te vel venio vicis zelus. Lenis modo pala pertineo quidem refero tation veniam.</p>\n",
+            'safe_summary' => '',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'path' => array(
+        'pid' => '73',
+        'source' => 'node/70',
+        'alias' => 'content/sed-ulciscor-utrum-exemple',
+        'language' => 'und',
+      ),
+      'name' => '',
+      'picture' => '0',
+      'data' => NULL,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '63',
+      'uid' => '0',
+      'title' => 'Iaceo Nisl Nunc Patria Refoveo exemple',
+      'log' => '',
+      'status' => '1',
+      'comment' => '0',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => '9bffc6f3-5c8b-4ade-9ba1-bc1c30b20ec4',
+      'nid' => '63',
+      'type' => 'page',
+      'language' => 'und',
+      'created' => '1463334697',
+      'changed' => '1463334773',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '9557e0ea-2c68-4e26-92cd-38b2ec69e803',
+      'revision_timestamp' => '1463334773',
+      'revision_uid' => '1',
+      'body' => array(
+        'und' => array(
+          array(
+            'value' => "Adipiscing eligo genitus ibidem loquor pala roto tation tincidunt. Facilisi incassum lobortis nutus paratus suscipit.\r\n\r\nDignissim gemino jumentum pertineo tation. Adipiscing amet elit eros saluto secundum. Aptent commoveo humo interdico luptatum ratis volutpat. Cogo distineo esca hendrerit humo immitto imputo quidne secundum tincidunt. Meus nutus quae utrum velit vindico. Magna meus nulla. Capto dolus euismod gemino scisco sed. Eros eum sit.\r\n\r\nAutem ea enim jumentum luctus pertineo praemitto quibus singularis wisi. At iaceo ideo jus ludus sagaciter sed torqueo vindico. Cui nulla sino tamen vereor. Defui incassum metuo obruo pecus quidne ratis uxor. Accumsan aliquam blandit cui ea loquor mos premo suscipere valde. Damnum ex gemino zelus. Abico jumentum persto. Amet lobortis persto ratis. Causa defui occuro quidne sit vereor.\r\n\r\nCamur dolor luptatum pneum qui ratis sino ut vulpes ymo. Abigo iriure magna nibh os refero. Autem damnum dolore haero. Abluo exputo facilisi humo melior metuo pecus plaga sagaciter verto. Abigo blandit euismod letalis molior nobis usitas vereor vindico.\r\n\r\nCogo commoveo te venio. Abluo capto diam dolus jus minim nostrud sudo. Abdo acsi amet verto. Bene ibidem nimis quibus si ullamcorper wisi. Iriure lobortis natu. Capto iriure nostrud sagaciter. Consectetuer hendrerit praesent. Incassum pala suscipit te. Eum exputo letalis minim pecus singularis tego vel wisi.\r\n\r\n",
+            'summary' => '',
+            'format' => 'plain_text',
+            'safe_value' => "<p>Adipiscing eligo genitus ibidem loquor pala roto tation tincidunt. Facilisi incassum lobortis nutus paratus suscipit.</p>\n<p>Dignissim gemino jumentum pertineo tation. Adipiscing amet elit eros saluto secundum. Aptent commoveo humo interdico luptatum ratis volutpat. Cogo distineo esca hendrerit humo immitto imputo quidne secundum tincidunt. Meus nutus quae utrum velit vindico. Magna meus nulla. Capto dolus euismod gemino scisco sed. Eros eum sit.</p>\n<p>Autem ea enim jumentum luctus pertineo praemitto quibus singularis wisi. At iaceo ideo jus ludus sagaciter sed torqueo vindico. Cui nulla sino tamen vereor. Defui incassum metuo obruo pecus quidne ratis uxor. Accumsan aliquam blandit cui ea loquor mos premo suscipere valde. Damnum ex gemino zelus. Abico jumentum persto. Amet lobortis persto ratis. Causa defui occuro quidne sit vereor.</p>\n<p>Camur dolor luptatum pneum qui ratis sino ut vulpes ymo. Abigo iriure magna nibh os refero. Autem damnum dolore haero. Abluo exputo facilisi humo melior metuo pecus plaga sagaciter verto. Abigo blandit euismod letalis molior nobis usitas vereor vindico.</p>\n<p>Cogo commoveo te venio. Abluo capto diam dolus jus minim nostrud sudo. Abdo acsi amet verto. Bene ibidem nimis quibus si ullamcorper wisi. Iriure lobortis natu. Capto iriure nostrud sagaciter. Consectetuer hendrerit praesent. Incassum pala suscipit te. Eum exputo letalis minim pecus singularis tego vel wisi.</p>\n",
+            'safe_summary' => '',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'path' => array(
+        'pid' => '66',
+        'source' => 'node/63',
+        'alias' => 'content/iaceo-nisl-nunc-patria-refoveo-exemple',
+        'language' => 'und',
+      ),
+      'name' => '',
+      'picture' => '0',
+      'data' => NULL,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '27',
+      'uid' => '0',
+      'title' => 'Second title en exemple',
+      'log' => '',
+      'status' => '1',
+      'comment' => '0',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'f204ff22-7d2a-4ed4-86e7-cd6ebd013a5e',
+      'nid' => '27',
+      'type' => 'article',
+      'language' => 'und',
+      'created' => '1463331673',
+      'changed' => '1463334623',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '230b4138-583b-4280-8e8f-f36b262764ef',
+      'revision_timestamp' => '1463334623',
+      'revision_uid' => '1',
+      'body' => array(
+        'und' => array(
+          array(
+            'value' => 'popopop',
+            'summary' => '',
+            'format' => 'filtered_html',
+            'safe_value' => "<p>popopop</p>\n",
+            'safe_summary' => '',
+          ),
+        ),
+      ),
+      'field_tags' => array(
+        'und' => array(
+          array(
+            'tid' => '1',
+          ),
+        ),
+      ),
+      'field_image' => array(
+        'und' => array(
+          array(
+            'fid' => '50',
+            'uid' => '0',
+            'filename' => 'dummyfile3333920032_f5fc59b0e1_o.jpg.jpg',
+            'uri' => 'public://dummyfile3333920032_f5fc59b0e1_o.jpg_53.jpg',
+            'filemime' => 'image/jpeg',
+            'filesize' => '184626',
+            'status' => '1',
+            'timestamp' => '1463331673',
+            'uuid' => 'e046348b-2cc4-42d1-abba-a9fc7c00589b',
+            'rdf_mapping' => array(),
+            'alt' => '',
+            'title' => '',
+            'width' => '1050',
+            'height' => '824',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'field_image' => array(
+          'predicates' => array(
+            'og:image',
+            'rdfs:seeAlso',
+          ),
+          'type' => 'rel',
+        ),
+        'field_tags' => array(
+          'predicates' => array(
+            'dc:subject',
+          ),
+          'type' => 'rel',
+        ),
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'path' => array(
+        'pid' => '30',
+        'source' => 'node/27',
+        'alias' => 'content/second-title-en-exemple',
+        'language' => 'und',
+      ),
+      'name' => '',
+      'picture' => '0',
+      'data' => NULL,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+)

@@ -3,3 +3,5 @@
  * @file
  * This module file can remain blank.
  */
+
+exec("drush ev 'print 222;'");
