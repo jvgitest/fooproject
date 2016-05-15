@@ -133,6 +133,7 @@ function site_deploy_update_7402(&$sandbox) {
   
   //features
   $module_list = array(
+    'fa_taxonomy',
     'fa_blocks_content',
     'fa_content_types',
     'fa_contents',
