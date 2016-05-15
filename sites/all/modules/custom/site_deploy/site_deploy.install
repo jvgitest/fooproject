@@ -255,3 +255,18 @@ function import_custom_menus(){
   
   return $messages;
 } 
+
+/**
+ * add nodes import/export functionnality
+ */
+function site_deploy_update_7406(&$sandbox){
+  $messages = array();
+   
+  $module_list = array(
+    'views_bulk_operations',
+    'node_export',
+  );
+  
+  $message = HookUpdateDeployTools\Modules::enable($module_list);
+  $messages[] = $message;
+}
