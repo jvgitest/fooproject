@@ -274,7 +274,7 @@ function site_deploy_update_7406(&$sandbox){
 /**
  * add nodes import/export functionnality
  */
-function site_deploy_update_7406(&$sandbox){
+function site_deploy_update_7407(&$sandbox){
   $messages = array();  
   $messages += import_custom_menus();
 }
