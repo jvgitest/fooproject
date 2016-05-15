@@ -1,3 +1,4 @@
 files
 content
 menus
+deploy (content syncro)
