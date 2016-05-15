@@ -71,14 +71,14 @@ function site_deploy_update_7402(&$sandbox) {
   db_query("DROP TABLE IF EXISTS {ctools_custom_content}");
   db_query("DROP TABLE IF EXISTS {ctools_object_cache}");
   db_query("DROP TABLE IF EXISTS {cache_features}");
-  db_query("DROP TABLE IF EXISTS {fe_block_boxes}");
   db_query("DROP TABLE IF EXISTS {cache_token}");
   db_query("DROP TABLE IF EXISTS {pathauto_state}");
+  db_query("DROP TABLE IF EXISTS {fe_block_boxes}");
   db_query("TRUNCATE TABLE {cache}"); //empty table not remove
   
   //modules
   $module_list = array(
-    'comment', 
+    'comment',
   );
    $message = HookUpdateDeployTools\Modules::disable($module_list);
    $messages[] = $message;
@@ -127,18 +127,12 @@ function site_deploy_update_7402(&$sandbox) {
   HookUpdateDeployTools\Message::make($message);
   $messages[] = $message;
   
-  //activate features mensu and import related custom menus
-  $message = HookUpdateDeployTools\Modules::enable(array('fa_menus'));
-  $messages[] = $message;
-  HookUpdateDeployTools\Message::make($message);
-  $messages += import_custom_menus();
-  
   //features
   $module_list = array(
     'fa_taxonomy',
-    'fa_blocks_content',
+    //'fa_blocks_content',
     'fa_content_types',
-    'fa_contents',
+    //'fa_contents',
     'fa_theme_sky',
   );
   $message = HookUpdateDeployTools\Modules::enable($module_list);
@@ -162,7 +156,18 @@ function site_deploy_update_7402(&$sandbox) {
   $message = site_deploy_copy_resources();
   $messages[] = $message;
   HookUpdateDeployTools\Message::make($message);
-
+  
+  //activate features mensu and import related custom menus
+  $message = HookUpdateDeployTools\Modules::enable(array('fa_menus'));
+  $messages[] = $message;
+  HookUpdateDeployTools\Message::make($message);
+  $messages += import_custom_menus();
+  
+  //set blocks in region
+  $message = HookUpdateDeployTools\Modules::enable(array('fa_blocks_content'));
+  $messages[] = $message;
+  HookUpdateDeployTools\Message::make($message);
+  
   return $messages;
 }
 
