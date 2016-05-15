@@ -72,5 +72,6 @@ background-position: 100% 45%;
 
 #header{
 	background:url("images/afbd/header_degrade.png") top right	 repeat-y;
-
 }
+
+.block-title{display:none !important}
