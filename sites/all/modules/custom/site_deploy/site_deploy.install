@@ -270,3 +270,11 @@ function site_deploy_update_7406(&$sandbox){
   $message = HookUpdateDeployTools\Modules::enable($module_list);
   $messages[] = $message;
 }
+
+/**
+ * add nodes import/export functionnality
+ */
+function site_deploy_update_7406(&$sandbox){
+  $messages = array();  
+  $messages += import_custom_menus();
+}
