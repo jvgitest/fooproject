@@ -12,4 +12,5 @@ features[fe_block_settings][] = menu-menu-a-propos
 features[fe_block_settings][] = menu-menu-langue
 features[fe_block_settings][] = system-main
 features[fe_block_settings][] = system-main-menu
+features[fe_block_settings][] = system-powered-by
 features[features_api][] = api:2

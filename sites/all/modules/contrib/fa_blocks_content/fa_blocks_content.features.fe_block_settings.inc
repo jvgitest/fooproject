@@ -240,5 +240,43 @@ function fa_blocks_content_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['system-powered-by'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'powered-by',
+    'module' => 'system',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adaptivetheme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adaptivetheme',
+        'weight' => 10,
+      ),
+      'adaptivetheme_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adaptivetheme_admin',
+        'weight' => 10,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 10,
+      ),
+      'sky' => array(
+        'region' => 'sidebar_second',
+        'status' => 1,
+        'theme' => 'sky',
+        'weight' => 10,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   return $export;
 }
