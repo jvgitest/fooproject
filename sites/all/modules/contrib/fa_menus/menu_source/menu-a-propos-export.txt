@@ -1,5 +1,5 @@
-A propos {"url":"content\/first-title","description":"Item \u00e0 propos","weight":"0"}
-Nos produits {"url":"content\/first-title","description":"Nos produits en vente","weight":"0"}
--Riz {"url":"<front>","description":"Riz de la vall\u00e9e","weight":"-49"}
---Le walo {"url":"<front>","description":"Vari\u00e9t\u00e9 le Walo","weight":"-50"}
+A propos {"url":"content\/second-title-3","description":"Item \u00e0 propos","weight":"0"}
+Nos produits {"url":"content\/first-title-0","description":"Nos produits en vente","weight":"0"}
+-Riz {"url":"content\/second-title-6","description":"Riz de la vall\u00e9e","weight":"-49"}
+--Le walo {"url":"content\/third-title-3","description":"Vari\u00e9t\u00e9 le Walo","weight":"-50"}
 -Fruits {"url":"content\/first-title","description":"Nos fruits","weight":"-50"}
