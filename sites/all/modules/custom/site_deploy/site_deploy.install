@@ -130,7 +130,7 @@ function site_deploy_update_7402(&$sandbox) {
   $module_list = array(
     'fa_blocks_content',
     'fa_content_types',
-    //'fa_menus',
+    'fa_contents',
     'fa_theme_sky',
   );
   $message = HookUpdateDeployTools\Modules::enable($module_list);
