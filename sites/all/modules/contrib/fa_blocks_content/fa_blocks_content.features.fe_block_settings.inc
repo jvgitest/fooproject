@@ -33,6 +33,12 @@ function fa_blocks_content_default_fe_block_settings() {
         'theme' => 'adaptivetheme_admin',
         'weight' => 0,
       ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
       'sky' => array(
         'region' => 'sidebar_first',
         'status' => 1,
@@ -63,6 +69,12 @@ function fa_blocks_content_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'adaptivetheme_admin',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
         'weight' => 0,
       ),
       'sky' => array(
@@ -97,6 +109,12 @@ function fa_blocks_content_default_fe_block_settings() {
         'theme' => 'adaptivetheme_admin',
         'weight' => 0,
       ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
       'sky' => array(
         'region' => 'menu_bar',
         'status' => 1,
@@ -127,6 +145,12 @@ function fa_blocks_content_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'adaptivetheme_admin',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
         'weight' => 0,
       ),
       'sky' => array(
@@ -161,6 +185,12 @@ function fa_blocks_content_default_fe_block_settings() {
         'theme' => 'adaptivetheme_admin',
         'weight' => 0,
       ),
+      'seven' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
       'sky' => array(
         'region' => 'content',
         'status' => 1,
@@ -191,6 +221,12 @@ function fa_blocks_content_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'adaptivetheme_admin',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
         'weight' => 0,
       ),
       'sky' => array(
