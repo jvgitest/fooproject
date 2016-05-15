@@ -59,35 +59,6 @@ function site_deploy_update_7000(&$sandbox) {
   return HookUpdateDeployTools\Message::make("Whatever is returned is displayed after this update runs.");
 }
 
- /**
- * Remove default blocks from regions blocks
- */
-
-function site_deploy_update_7401() {
-$theme='sky';
- $result = db_query("SELECT * FROM {block}");
-  $blocks = array();
-  while ($bloc = $result->fetchAssoc()) {
-    $blocks[$bloc['module']][$bloc['delta']] = $bloc;
-  }
-  //HookUpdateDeployTools\Message::varDumpToDrush($blocks);
-  
-  // Remove blocks that are no longer defined by the code from the database.
-  foreach ($blocks as $module => $module_block) {
-    // This cleanup does not apply to disabled modules, to avoid configuration
-    // being lost when modules are disabled.
-    if (module_exists($module)) {
-      foreach ($module_block as $delta => $block) {
-         $sql=sprintf("UPDATE {block} SET status = '%s',region = '%s' WHERE module = '%s' AND delta = '%s'", 0, 'BLOCK_REGION_NONE', $module, $delta);
-         db_query($sql);
-         HookUpdateDeployTools\Message::make($sql);
-      }
-    }
-  }
-  
-  return HookUpdateDeployTools\Message::make("Whatever is returned is displayed after this update runs.");
-}
-
 /**
  * Whatever it placed in this docblock gets displayed upon drush updb.
  */
@@ -149,11 +120,17 @@ function site_deploy_update_7402(&$sandbox) {
   HookUpdateDeployTools\Message::make($message);
   $messages[] = $message;
   
+  //activate features mensu and import related custom menus
+  $message = HookUpdateDeployTools\Modules::enable(array('fa_menus'));
+  $messages[] = $message;
+  HookUpdateDeployTools\Message::make($message);
+  $messages += import_custom_menus();
+  
   //features
   $module_list = array(
     'fa_blocks_content',
     'fa_content_types',
-    'fa_menus',
+    //'fa_menus',
     'fa_theme_sky',
   );
   $message = HookUpdateDeployTools\Modules::enable($module_list);
@@ -216,4 +193,23 @@ function site_deploy_recursive_copy($src,$dst) {
         } 
     } 
     closedir($dir); 
+}
+
+/**Import custom menus
+*/
+function import_custom_menus(){
+  $messages = array();
+  $message = HookUpdateDeployTools\Settings::set('hook_update_deploy_tools_menu_feature', 'fa_menus');
+  $messages[] = $message;
+  HookUpdateDeployTools\Message::make($message);
+  
+  $message = HookUpdateDeployTools\Menus::import('menu-a-propos');
+  $messages[] = $message;
+  HookUpdateDeployTools\Message::make($message);
+  
+  $message = HookUpdateDeployTools\Menus::import('menu-langue');
+  $messages[] = $message;
+  HookUpdateDeployTools\Message::make($message);
+  
+  return $messages;
 } 
