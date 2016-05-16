@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * feeds_import.features.user_permission.inc
+ * fa_feeds_importer.features.user_permission.inc
  */
 
 /**
  * Implements hook_user_default_permissions().
  */
-function feeds_import_user_default_permissions() {
+function fa_feeds_importer_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: 'administer feeds'.

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Feeds importer more feature.
+ */
+
+include_once 'fa_feeds_importer.features.inc';

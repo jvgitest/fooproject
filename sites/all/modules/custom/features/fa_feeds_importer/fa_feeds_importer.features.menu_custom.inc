@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * feeds_import.features.menu_custom.inc
+ * fa_feeds_importer.features.menu_custom.inc
  */
 
 /**
  * Implements hook_menu_default_menu_custom().
  */
-function feeds_import_menu_default_menu_custom() {
+function fa_feeds_importer_menu_default_menu_custom() {
   $menus = array();
 
   // Exported menu: management.

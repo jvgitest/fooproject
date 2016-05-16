@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * feeds_import.features.menu_links.inc
+ * fa_feeds_importer.features.menu_links.inc
  */
 
 /**
  * Implements hook_menu_default_menu_links().
  */
-function feeds_import_menu_default_menu_links() {
+function fa_feeds_importer_menu_default_menu_links() {
   $menu_links = array();
 
   // Exported menu link: management_feeds-importers:admin/structure/feeds.
