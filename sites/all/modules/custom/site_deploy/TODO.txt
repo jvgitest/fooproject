@@ -1,5 +1,0 @@
-files
-content
-menus
-deploy (content syncro) ou node export
-les files (images etc..)
