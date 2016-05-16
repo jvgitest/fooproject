@@ -26,6 +26,14 @@ function fa_content_types_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'mycontentfeed' => array(
+      'name' => t('mycontentfeed'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'page' => array(
       'name' => t('Basic page'),
       'base' => 'node_content',
