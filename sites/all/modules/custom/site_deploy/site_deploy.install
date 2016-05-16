@@ -284,11 +284,11 @@ function site_deploy_update_7407(&$sandbox){
  */
 function site_deploy_update_7408(&$sandbox){
   $messages = array();
-   
+  db_query("DROP TABLE IF EXISTS {field_data_field_age}");
   $module_list = array(
     'feeds',
-    'feeds_import', //features
-    'feeds_ui', //features
+    'feeds_ui', 
+    'fa_feeds_importer', //features
   );
   
   $message = HookUpdateDeployTools\Modules::enable($module_list);
