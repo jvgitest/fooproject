@@ -287,7 +287,7 @@ function site_deploy_update_7408(&$sandbox){
    
   $module_list = array(
     'feeds',
-    'feeds_import',
+    'feeds_import', //features
   );
   
   $message = HookUpdateDeployTools\Modules::enable($module_list);
